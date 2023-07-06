@@ -2,36 +2,20 @@
 // // const testsSchema = require('./tests')
 
 // const adminSchema = new mongoose.Schema({
-//     labName: {
+
+//     username: {
+//         type: String,
+//         required: true,
+//         unique: true
+//     },
+//     password: {
 //         type: String,
 //         required: true
 //     },
-//     // owner: {
-//     //     type: mongoose.Schema.Types.ObjectId,
-//     //     ref: 'User',
-//     //     required: true,
-//     // },
-//     phoneNumber: {
+//     email: {
 //         type: String,
-//         required: true
-//     },
-//     location: {
-//         type: String,
-//         required: true
-//     },
-//     images: {
-//         type: [Buffer],
-//         required: true
-//     },
-//     // or use this (down here) for imgs if faced any issues and use this in the front src={laboratory.imageUrls[0]}
-//     // imageUrls: {
-//     //     type: [String],
-//     //     required: true
-//     //   },
-//     approvalStatus: {
-//         type: String,
-//         enum: ['pending', 'approved', 'rejected'],
-//         default: 'pending',
+//         required: true,
+//         unique: true
 //     },
 // }, { timestamps: true });
 

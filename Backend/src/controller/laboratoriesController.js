@@ -42,6 +42,10 @@ exports.createLaboratories = async (req, res) => {
     }
 };
 
+
+
+
+// Unused routes yet
 // Update data
 exports.updateLaboratory = async (req, res) => {
     const labId = req.params.id;

@@ -19,6 +19,9 @@ import SummaryTable from './components/UI/SummaryTable';
 import LaboratoryHome from "./pages/LaboratoryHome";
 import Admin from './Dashboard/Admin';
 import LabReq from './Dashboard/LabReq';
+import TestReq from './Dashboard/TestsReq';
+import Sidebar from "./Dashboard/Sidebar";
+
 
 function App() {
 
@@ -41,9 +44,6 @@ function App() {
           <Route path="/testDetails" element={<TestDetails />} />
           <Route path="/checkout" element={<Checkout />} />               {/* showed when the patient choose a test to perform and if an out patient choose call service */}
           <Route path="/summary" element={<SummaryTable />} />
-          <Route path="/admin" element={<Admin />} />
-          <Route path="/labreq" element={<LabReq />} />
-          <Route path="/testreq" element={<LabReq />} />
           <Route path="/index" element={<LaboratoryHome />} />            {/* Make this component to be hero for the Labpage */}
           <Route path="/patientProfile" element={<PatientProfile />} />   {/* showed after the patient click on the profile avatar in home page after he logged in */}
           <Route path="/labProfile" element={<LaboratoryProfile />} />    {/* showed when the lab logged into his account */}
@@ -52,7 +52,7 @@ function App() {
           <Route path="/Signup" element={<Signup />} />
 
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </BrowserRouter>
 
 
@@ -61,8 +61,13 @@ function App() {
 
       <BrowserRouter>
 
+        <Admin />
+        {/* <Sidebar /> */}
         <Routes>
           {/* admin privileges : approve labs + patients   delete + add labs */}
+          {/* <Route path="/admin" element={<Admin />} /> */}
+          <Route path="/labreq" element={<LabReq />} />
+          <Route path="/testreq" element={<TestReq />} />
         </Routes>
 
       </BrowserRouter>
@@ -73,9 +78,9 @@ function App() {
       <BrowserRouter>
 
         <Routes>
-          
-        </Routes>
 
+        </Routes>
+        <Footer />
       </BrowserRouter>
     </>
 

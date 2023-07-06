@@ -11,6 +11,10 @@ router.get('/laboratories/:id', laboratoriesController.getLaboratoryById);
 // Create a new laboratory
 router.post('/laboratories', laboratoriesController.createLaboratories);
 
+
+
+
+// Unused routes yet
 // Update an existing laboratory
 router.put('/laboratories/:id', laboratoriesController.updateLaboratory);
 

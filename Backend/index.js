@@ -6,6 +6,7 @@ const laboratoriesRoutes = require('./src/routes/laboratoriesRoutes');
 const offersRoutes = require('./src/routes/offersRoutes');
 const checkoutRoutes = require('./src/routes/checkoutRoutes');
 const testRoutes = require('./src/routes/testRoutes');
+const labRequestRoutes = require('./src/routes/labRequestRoutes');
 const userRoutes = require('./src/routes/userRoutes');
 const adminRoutes = require('./src/routes/adminRoutes');
 const bodyParser = require('body-parser');
@@ -26,11 +27,12 @@ app.use(bodyParser.json());
 // Routes
 app.use("/contact", contactRoutes);
 app.use("/lab",laboratoriesRoutes);
-app.use(adminRoutes);
+app.use("/admin",adminRoutes);
 app.use("/offers", offersRoutes);
 app.use('/checkout', checkoutRoutes);
 app.use("/test", testRoutes);
 app.use('/user' , userRoutes);
+app.use('/labreq' , labRequestRoutes);
 
 
 

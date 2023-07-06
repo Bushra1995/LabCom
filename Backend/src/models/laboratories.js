@@ -6,11 +6,6 @@ const laboratoriesSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    // userId: {
-    //     type: mongoose.Schema.Types.ObjectId,
-    //     ref: 'User',
-    //     required: true
-    // },
     phoneNumber: {
         type: String,
         required: true
@@ -19,11 +14,6 @@ const laboratoriesSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    // email: {
-    //     type: String,
-    //     required: true,
-    //     unique: true // Add unique constraint for the email field
-    // },
     images: {
         type: [Buffer],
     },
@@ -32,11 +22,11 @@ const laboratoriesSchema = new mongoose.Schema({
     //     type: [String],
     //     required: true
     //   },
-    approvalStatus: {
-        type: Boolean,
-        enum: ['pending', 'approved', 'rejected'],
-        default: false,
-      },
+    // approved: {
+    //     type: Boolean,
+    //     enum: ['pending', 'approved', 'rejected'],
+    //     default: false,
+    //   },
 },{ timestamps: true });
 
 module.exports = mongoose.model('Laboratories', laboratoriesSchema);
