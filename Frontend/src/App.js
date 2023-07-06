@@ -17,10 +17,6 @@ import ContactUs from './pages/ContactUs';
 import TestDetails from './pages/TestDetails';
 import SummaryTable from './components/UI/SummaryTable';
 import LaboratoryHome from "./pages/LaboratoryHome";
-import Admin from './Dashboard/Admin';
-import LabReq from './Dashboard/LabReq';
-import TestReq from './Dashboard/TestsReq';
-import Sidebar from "./Dashboard/Sidebar";
 
 
 function App() {
@@ -52,25 +48,9 @@ function App() {
           <Route path="/Signup" element={<Signup />} />
 
         </Routes>
-        {/* <Footer /> */}
+        <Footer />
       </BrowserRouter>
 
-
-
-      {/* -----------------------------------------------Admin-------------------------------------------- */}
-
-      <BrowserRouter>
-
-        <Admin />
-        {/* <Sidebar /> */}
-        <Routes>
-          {/* admin privileges : approve labs + patients   delete + add labs */}
-          {/* <Route path="/admin" element={<Admin />} /> */}
-          <Route path="/labreq" element={<LabReq />} />
-          <Route path="/testreq" element={<TestReq />} />
-        </Routes>
-
-      </BrowserRouter>
 
 
       {/* -----------------------------------------------Laboratory-------------------------------------------- */}
@@ -80,7 +60,6 @@ function App() {
         <Routes>
 
         </Routes>
-        <Footer />
       </BrowserRouter>
     </>
 
