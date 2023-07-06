@@ -282,18 +282,18 @@ const Checkout = () => {
                         className="mt-2 font-medium leading-4 py-3 px-4 text-white text-center text-decoration-none rounded"
                         style={{ backgroundColor: '#3AA6B9' }}
                     >
-                        Submit
+                        Complete Payment
                     </button>
                 </div>
             </form>
-            <Link to="#" className="flex justify-center items-center text-decoration-none">
+            {/* <Link to="#" className="flex justify-center items-center text-decoration-none">
                 <button
                     className="mt-2 mb-4 font-medium leading-4 py-4 w-50 md:w-4/12 lg:w-50 text-white text-center text-decoration-none rounded"
                     style={{ backgroundColor: '#3AA6B9' }}
                 >
                     Complete Payment
                 </button>
-            </Link>
+            </Link> */}
             <ToastContainer />
         </div>
 

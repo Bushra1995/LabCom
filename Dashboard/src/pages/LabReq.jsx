@@ -1,10 +1,9 @@
 import React from "react";
-import ReqTable from './LabReq';
 
 const Table = () => {
     return (
         <>
-            <div className="container mx-auto py-10 md:w-4/5 w-11/12 px-6">
+            <div className="container mx-auto py-10 md:w-4/5 w-11/12 px-1">
                 {/* Remove class [ border-dashed border-2 border-gray-300 ] to remove dotted border */}
                 <div className="w-full h-full rounded">
                     {/* Place your content here */}
@@ -58,9 +57,10 @@ const Table = () => {
                             </div>
                         </div>
                     </div>
+
                     <div className="py-20">
                         <div className="mx-auto container bg-white dark:bg-gray-800 shadow rounded">
-                            <div className="flex flex-col lg:flex-row p-4 lg:p-8 justify-between items-start lg:items-stretch w-full">
+                            <div className="flex flex-col lg:flex-row justify-between items-start lg:items-stretch w-full">
                                 <div className="w-full lg:w-1/3 flex flex-col lg:flex-row items-start lg:items-center">
                                     <div className="flex items-center">
                                         {/* edit icon */}
@@ -97,7 +97,10 @@ const Table = () => {
 
                                 </div>
                             </div>
-                            <h2 className="text-center mb-4"> Laboratory Requests</h2>
+                            {/* <div className="border-b bg-green-300"> */}
+                            <h1 className="text-center dark:text-gray-400 font-bold h-10 border-b bg-gray-400"> Laboratory Requests</h1>
+                            {/* </div> */}
+
                             <div className="w-full overflow-x-scroll xl:overflow-x-hidden">
                                 <table className="min-w-full bg-white dark:bg-gray-800">
                                     <thead>
@@ -128,7 +131,7 @@ const Table = () => {
                                             <td className="text-sm flex-row justify-center mt-8 whitespace-no-wrap text-gray-800 dark:text-gray-100 tracking-normal leading-4">
                                                 <button className="bg-red-400 h-8 w-24 rounded-md flex items-center justify-center">
                                                     <div className="flex items-center">
-                                                        <span className="text-xs text-gray-700 font-normal">Approve</span>
+                                                        <span className="text-xs text-gray-700 font-normal">Reject</span>
                                                     </div>
                                                 </button>
                                             </td>
