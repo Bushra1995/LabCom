@@ -39,4 +39,4 @@ LabCom is constantly evolving, and we have exciting plans for the future. Here a
 We welcome contributions from the open source community!
 
 ## Contact 📧
-For any questions, suggestions, or inquiries, feel free to reach out to our team at [bushra95ga@gmail.com](mailto:bushra95ga@gmail.com).
+For any questions, suggestions, or inquiries, feel free to reach out to me [bushra95ga@gmail.com](mailto:bushra95ga@gmail.com).
