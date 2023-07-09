@@ -15,7 +15,7 @@ Track the progress and development of the project by visiting my [Trello Board](
 The source code for LabCom can be found in the src directory. It contains all the necessary files and directories to run the platform successfully. Please refer to the documentation for instructions on setting up the environment and running the project.
 
 ## Demo 🎥
-Watch a live demo of LabCom by visiting my [LabCom Demo](https://your-demo-link) Page. The demo showcases the key features and functionalities of the platform, giving users an interactive preview.
+Watch a live demo of LabCom by visiting my [LabCom Demo](https://bushra1995.github.io/LabCom/) Page. The demo showcases the key features and functionalities of the platform, giving users an interactive preview.
 
 ## Presentation 🎉
 For a comprehensive understanding of LabCom and its development process, access the project presentation here [Presentation](https://your-presentation-link). The presentation provides insights into the project's goals, architecture and challenges.
