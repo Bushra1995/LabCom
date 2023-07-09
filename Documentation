@@ -1,0 +1,50 @@
+# LabCom Documentation
+
+## Framework Skills Covered
+
+LabCom utilizes the following framework skills:
+
+- React
+- Tailwind CSS
+- Material UI
+- Axios
+
+## LabCom Functional Specifications
+
+LabCom is a web application that provides users with a convenient and user-friendly interface to browse and reserve a wide range of medical tests offered by various accredited laboratories. The key features of LabCom include:
+
+- Browsing and searching for medical tests.
+- Selecting a preferred laboratory for test reservation.
+- Scheduling appointments for tests.
+- Completing the payment process securely.
+
+## Technical Project Specifications
+
+The LabCom project is built using the following technical specifications:
+
+- Front-end Framework: React
+- UI Frameworks: Tailwind CSS and Material UI
+- API Communication: Axios
+- Database: [Specify the database used, if applicable]
+- Server: [Specify the server or backend technology used, if applicable]
+
+## Test Case Presentation: Reserving a Test from a Preferred Lab
+
+One of the most representative features of LabCom is the ability to reserve a test from a preferred laboratory. Here's an overview of the test case for this feature:
+
+1. Preconditions:
+   - User is logged in to LabCom.
+   - User has selected a medical test from the catalog.
+   - User has chosen a preferred laboratory.
+
+2. Steps:
+   - Navigate to the test reservation page.
+   - Select the desired date and time for the appointment.
+   - Confirm the appointment details and review the payment information.
+   - Proceed to the payment gateway and complete the payment process.
+   - Receive a confirmation message and appointment details.
+
+3. Expected Results:
+   - The user successfully reserves the test from the preferred laboratory.
+   - The user receives a confirmation of the appointment with relevant details.
+
