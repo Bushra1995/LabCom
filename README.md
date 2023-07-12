@@ -6,7 +6,7 @@
 - Seamless payment process 💳    
 - Personalized profiles 📝
 ## Documentation 📖  
-Find detailed documentation about the project in the Documentation directory. It includes information on installation, configuration, and usage of the LabCom platform.
+Find detailed documentation about the project in the [Documentation directory](https://github.com/Bushra1995/LabCom/blob/main/Documentation.pdf). It includes information on installation, configuration, and usage of the LabCom platform. 
 
 ## Trello Board 📋
 Track the progress and development of the project by visiting my [Trello Board](https://trello.com/b/IbVSrYv9/masterpies-tasks). The Trello board provides an organized view of tasks, milestones, and future enhancements.
@@ -18,7 +18,7 @@ The source code for LabCom can be found in the src directory. It contains all th
 Watch a live demo of LabCom by visiting my [LabCom Demo](https://bushra1995.github.io/LabCom/) Page. The demo showcases the key features and functionalities of the platform, giving users an interactive preview.
 
 ## Presentation 🎉
-For a comprehensive understanding of LabCom and its development process, access the project presentation here [Presentation](https://your-presentation-link). The presentation provides insights into the project's goals, architecture and challenges.
+For a comprehensive understanding of LabCom and its development process, access the project presentation here [Presentation](https://github.com/Bushra1995/LabCom/blob/main/LabCom%20presentation.pdf). The presentation provides insights into the project's goals, architecture and challenges.
 
 ## Future Plans 🔮
 LabCom is constantly evolving, and we have exciting plans for the future. Here are some features we plan to implement:
