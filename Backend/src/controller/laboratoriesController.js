@@ -1,3 +1,4 @@
+const laboratories = require('../models/laboratories');
 const Laboratory = require('../models/laboratories');
 
 // Read data
@@ -10,6 +11,60 @@ exports.getLaboratories = async (req, res) => {
         res.status(500).json({ error: 'Internal server error' });
     }
 };
+
+
+exports.getapprovedLabs = async (req, res) => {
+    try {
+        const laboratories = await Laboratory.find({flag:"1"}); // Fetch only approved laboratories
+        res.status(200).json(laboratories);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+};
+
+
+exports.getrejectedLabs = async (req, res) => {
+    try {
+        console.log(req.params.id);
+        const id = req.params.id;
+        const laboratories = await Laboratory.findByIdAndDelete(id); 
+
+        res.status(200).json(laboratories);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+};
+
+
+exports.getLaboratoriesById = async (req, res) => {
+    const userId = req.params.id
+    console.log(userId);
+    try {
+        const laboratories = await Laboratory.find({ userId: userId }); // Fetch only approved laboratories
+        console.log(laboratories)
+        res.status(200).json(laboratories);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+};
+
+
+
+exports.getLaboratoriesByFlag = async (req, res) => {
+    try {
+        const laboratories = await Laboratory.find({ flag: 0 });
+        console.log(laboratories)
+        res.status(200).json(laboratories);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+};
+
+
 
 // Get lab by ID
 exports.getLaboratoryById = async (req, res) => {
@@ -106,3 +161,28 @@ exports.updateApprovalStatus = async (req, res) => {
         res.status(500).json({ error: 'Internal server error' });
     }
 };
+
+
+
+exports.approvedLabs = async (req, res) => {
+    const userId = req.params.id;
+    console.log(userId);
+
+    try {
+   const lab = await Laboratory.findOneAndUpdate(
+    { userId }, // Find the lab by userId
+    { flag: '1' }, // Update the flag to 'approved'
+    { new: true } // Return the updated lab
+).exec(); // Execute the query
+
+if (!lab) {
+    return res.status(404).json({ message: 'Lab not found' });
+}
+
+res.status(200).json(lab);
+} catch (error) {
+console.error(error);
+res.status(500).json({ message: 'Server error' });
+
+}
+}

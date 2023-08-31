@@ -17,6 +17,14 @@ const laboratoriesSchema = new mongoose.Schema({
     images: {
         type: [Buffer],
     },
+    userId: {
+        type: String,
+    },
+    flag: {
+        type: String,
+        default: 0,
+    },
+
     // or use this (down here) for imgs if faced any issues and use this in the front src={laboratory.imageUrls[0]}
     // imageUrls: {
     //     type: [String],

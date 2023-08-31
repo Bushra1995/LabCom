@@ -66,7 +66,7 @@ const TestCards = () => {
                                         <p>Test Requirements : {offer.testConditions}</p>
                                         <p>Test Price : {offer.price}</p>
                                         <Link
-                                            to="checkout"
+                                            to="/checkout"
                                             className="read-more text-decoration-none"
                                             onClick={() => handleAddToCheckout(offer)}
                                         >

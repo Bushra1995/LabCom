@@ -26,9 +26,8 @@ const AboutUs = () => {
                                     What We Provide for Your Health
                                 </h2>
                                 <p className="wow fadeInUp" data-wow-delay=".6s">
-                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                                    dinonumy <br className="d-none d-lg-block" /> eirmod tempor
-                                    invidunt ut labore et dolore magn.
+                                    Our laboratory offers a wide spectrum of services that are designed to cater to your individual health needs.
+                                    <br className="d-none d-lg-block" /> We understand that accurate and timely diagnoses form the foundation of effective medical treatment.
                                 </p>
                             </div>
                         </div>

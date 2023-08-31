@@ -5,24 +5,29 @@ const laboratoriesController = require('../controller/laboratoriesController');
 // Get all approved laboratories
 router.get('/laboratories', laboratoriesController.getLaboratories);
 
+// approved labs
+router.get('/approvedLabs', laboratoriesController.getapprovedLabs);
+
 // Get lab by ID
 router.get('/laboratories/:id', laboratoriesController.getLaboratoryById);
+router.get('/getLaboratoriesByFlag', laboratoriesController.getLaboratoriesByFlag);
+router.get('/getLaboratoriesById/:id', laboratoriesController.getLaboratoriesById);
 
 // Create a new laboratory
 router.post('/laboratories', laboratoriesController.createLaboratories);
 
-
+router.put('/approvedLabs/:id',laboratoriesController.approvedLabs)
 
 
 // Unused routes yet
-// Update an existing laboratory
-router.put('/laboratories/:id', laboratoriesController.updateLaboratory);
+
+
 
 // Delete a laboratory
-router.delete('/laboratories/:id', laboratoriesController.deleteLaboratory);
+router.delete('/rejectedLabs/:id', laboratoriesController.getrejectedLabs);
 
 // Update lab approval status
-router.put('/:id/approval', laboratoriesController.updateApprovalStatus);
+// router.put('/:id/approval', laboratoriesController.updateApprovalStatus);
 
 
 module.exports = router;

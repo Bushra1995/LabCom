@@ -22,7 +22,8 @@ const Checkout = () => {
         thirdName: '',
         lastName: '',
         gender: '',
-        ageGroup: '',
+        testName: [],
+        // ageGroup: '',
         address: '',
         phoneNumber: '',
         cardHolderName: '',
@@ -40,9 +41,31 @@ const Checkout = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        // Phone Number Validation
+        const phoneNumberRegex = /^(078|079|077)\d{7}$/;
+        if (!phoneNumberRegex.test(formData.phoneNumber)) {
+            toast.error('Invalid phone number format');
+            return;
+        }
+
+        // Card Number Validation
+        const cardNumberRegex = /^\d{16}$/;
+        if (!cardNumberRegex.test(formData.cardNumber)) {
+            toast.error('Invalid card number format');
+            return;
+        }
+
+        // CVV Validation
+        if (formData.cvc.length !== 3 || isNaN(formData.cvc)) {
+            toast.error('Invalid CVV format');
+            return;
+        }
+
+
         try {
             // Send data to the server
             await axios.post('http://localhost:4000/checkout/checkout', formData);
+            console.log(formData);
 
             // Display success toast notification
             toast.success('Payment completed');
@@ -52,7 +75,7 @@ const Checkout = () => {
 
             // Redirect to home page
             navigate('/');
-            
+
         } catch (error) {
             // Handle error
             console.error(error);
@@ -67,7 +90,8 @@ const Checkout = () => {
             thirdName: '',
             lastName: '',
             gender: '',
-            ageGroup: '',
+            testName: '',
+            // ageGroup: '',
             address: '',
             phoneNumber: '',
             cardHolderName: '',
@@ -187,7 +211,18 @@ const Checkout = () => {
                                     </div>
                                 </div>
 
-                                <div className="relative w-full">
+                                <input
+                                    value={formData.testName}
+                                    onChange={handleChange}
+                                    className="px-2 focus:outline-none focus:ring-2 focus:ring-gray-500 border-b border-gray-200 leading-4 text-base placeholder-gray-600 py-4 w-full"
+                                    type="text"
+                                    name="testName"
+                                    placeholder="Tests Names"
+                                />
+
+
+                                {/* this was the age group */}
+                                {/* <div className="relative w-full">
                                     <p id="button1" className=" px-2 border-b border-gray-200 text-left leading-4 text-base text-gray-600 py-4 w-full">
                                         {changeText2}
                                     </p>
@@ -213,7 +248,9 @@ const Checkout = () => {
                                             </p>
                                         </div>
                                     </div>
-                                </div>
+                                </div> */}
+
+
 
                             </div>
                             <div className="flex justify-between flex-col sm:flex-row w-full items-start space-y-8 sm:space-y-0 sm:space-x-8">
@@ -258,9 +295,16 @@ const Checkout = () => {
                                     <input
                                         value={formData.cvc}
                                         onChange={handleChange}
+                                        onInput={(e) => {
+                                            if (e.target.value.length > 3) {
+                                                e.target.value = e.target.value.slice(0, 3);
+                                            }
+                                        }}
                                         className="focus:outline-none focus:ring-2 focus:ring-gray-500 px-2 border-b border-gray-200 leading-4 text-base placeholder-gray-600 pt-4 pb-3   w-full"
                                         type="text"
                                         name="cvc"
+                                        inputMode="numeric"
+                                        maxLength="3"
                                         placeholder="CVC" />
                                 </div>
                                 <div className="w-full">

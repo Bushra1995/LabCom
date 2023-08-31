@@ -5,7 +5,6 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import svg3 from '../img/shapes/shape-3.svg';
 import { Link } from "react-router-dom";
 import axios from 'axios';
-
 const Laboratories = () => {
 
     const [laboratories, setLaboratories] = useState([]);
@@ -16,7 +15,7 @@ const Laboratories = () => {
 
     useEffect(() => {
         axios
-            .get('http://localhost:4000/lab/laboratories')
+            .get('http://localhost:4000/lab/approvedLabs')
             .then((response) => {
                 setLaboratories(response.data);
                 console.log(response.data);

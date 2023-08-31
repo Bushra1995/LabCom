@@ -67,8 +67,6 @@ const Table = () => {
                                         <tr className="w-full h-16 border-gray-300 dark:border-gray-200 border-b py-8">
                                             <th className="text-gray-600 dark:text-gray-400 font-bold pr-6 px-4 text-center text-m tracking-normal leading-4">Lab Name</th>
                                             <th className="text-gray-600 dark:text-gray-400 font-bold pr-6 text-end text-m tracking-normal leading-4">Status</th>
-                                            {/* <th className="text-gray-600 dark:text-gray-400 font-normal pr-6 text-center text-sm tracking-normal leading-4">Pending</th>
-                                    <th className="text-gray-600 dark:text-gray-400 font-normal pr-6 text-center text-sm tracking-normal leading-4">Rejecting</th> */}
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -81,13 +79,6 @@ const Table = () => {
                                                     </div>
                                                 </button>
                                             </td>
-                                            {/* <td className="text-sm flex-row justify-center mt-8 whitespace-no-wrap text-gray-800 dark:text-gray-100 tracking-normal leading-4">
-                                                <button className="bg-yellow-700 h-8 w-24 rounded-md flex items-center justify-center">
-                                                    <div className="flex items-center">
-                                                        <span className="text-xs text-gray-700 font-normal">Approve</span>
-                                                    </div>
-                                                </button>
-                                            </td> */}
                                             <td className="text-sm flex-row justify-center mt-8 whitespace-no-wrap text-gray-800 dark:text-gray-100 tracking-normal leading-4">
                                                 <button className="bg-red-400 h-8 w-24 rounded-md flex items-center justify-center">
                                                     <div className="flex items-center">
@@ -95,23 +86,6 @@ const Table = () => {
                                                     </div>
                                                 </button>
                                             </td>
-                                            {/* <td className="pr-8 relative">
-                                    <div className="dropdown-content mt-8 absolute left-0 -ml-12 shadow-md z-10 hidden w-32">
-                                        <ul className="bg-white dark:bg-gray-800 shadow rounded py-1">
-                                            <li className="cursor-pointer text-gray-600 dark:text-gray-400 text-sm leading-3 tracking-normal py-3 hover:bg-indigo-700 hover:text-white px-3 font-normal">Edit</li>
-                                            <li className="cursor-pointer text-gray-600 dark:text-gray-400 text-sm leading-3 tracking-normal py-3 hover:bg-indigo-700 hover:text-white px-3 font-normal">Delete</li>
-                                            <li className="cursor-pointer text-gray-600 dark:text-gray-400 text-sm leading-3 tracking-normal py-3 hover:bg-indigo-700 hover:text-white px-3 font-normal">Duplicate</li>
-                                        </ul>
-                                    </div>
-                                    <button className="text-gray-500 rounded cursor-pointer border border-transparent focus:outline-none">
-                                        <svg xmlns="http://www.w3.org/2000/svg" onclick="dropdownFunction(this)" className="icon icon-tabler icon-tabler-dots-vertical dropbtn" width={28} height={28} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                                            <path stroke="none" d="M0 0h24v24H0z" />
-                                            <circle cx={12} cy={12} r={1} />
-                                            <circle cx={12} cy={19} r={1} />
-                                            <circle cx={12} cy={5} r={1} />
-                                        </svg>
-                                    </button>
-                                </td> */}
                                         </tr>
                                     </tbody>
                                 </table>

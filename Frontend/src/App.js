@@ -17,10 +17,10 @@ import ContactUs from './pages/ContactUs';
 import TestDetails from './pages/TestDetails';
 import SummaryTable from './components/UI/SummaryTable';
 import LaboratoryHome from "./pages/LaboratoryHome";
+import UserProfile from "./pages/UserProfile";
 
 
 function App() {
-
   return (
 
     <>
@@ -37,6 +37,7 @@ function App() {
           <Route path="/laboratories" element={<Laboratories />} />       {/* renders in home page */}
           <Route path="/testCards" element={<TestCards />} />             {/* showed when patient click on a lab from the home page so here he can choose the tests to perform */}
           <Route path="/LabPage/:id" element={<LabPage />} />
+          <Route path="/user" element={<UserProfile />} />
           <Route path="/testDetails" element={<TestDetails />} />
           <Route path="/checkout" element={<Checkout />} />               {/* showed when the patient choose a test to perform and if an out patient choose call service */}
           <Route path="/summary" element={<SummaryTable />} />

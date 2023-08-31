@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import bgImage from "../../assets/Images/slider.png"
 // import doctor from "../../img/slider/slider-2.jpg"
@@ -119,7 +119,7 @@ function ComplexNavbar() {
                                 possible</h2> */}
                         </div>
                         <div className="lg:flex">
-                            <Link to="testCards" className="hidden text-center md:block hover:opacity-90 text-base w-full xl:text-base xl:w-6/12 mt-4 xl:mt-8 f-f-r py-4  bg-indigo-700 text-white font-bold focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 rounded-lg text-decoration-none" style={{ backgroundColor: "#3AA6B9" }}>Tests Offers</Link>
+                            <button className="hidden md:block hover:opacity-90 text-base w-full xl:text-base xl:w-6/12 mt-4 xl:mt-8 f-f-r py-4  bg-indigo-700 text-white font-bold focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 rounded-lg" style={{ backgroundColor: "#3AA6B9" }}>Tests Offers</button>
                             <Link to="laboratories" className="text-center hidden md:block hover:opacity-90 text-base w-full xl:text-base xl:w-4/12 lg:ml-2 xl:ml-2 mt-4 xl:mt-8 f-f-r py-4  bg-indigo-200 text-indigo-600 font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 rounded-lg text-decoration-none" >Our Labs</Link>
                         </div>
                     </div>

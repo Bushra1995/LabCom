@@ -53,7 +53,7 @@ export default function SignUp() {
                 if (formData.role === "laboratory") {
                     navigate("/labProfile"); // Redirect to laboratory profile page
                 } else if (formData.role === "patient") {
-                    navigate("/"); // Redirect to patient profile page
+                    navigate("/patientProfile"); // Redirect to patient profile page
                 } else {
                     navigate("/"); // Default redirection to home page
                 }

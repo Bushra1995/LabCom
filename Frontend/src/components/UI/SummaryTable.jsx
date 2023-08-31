@@ -1,16 +1,41 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import axios from "axios";
+
 
 function SummaryTable() {
+
     const [selectedTests, setSelectedTests] = useState([]);
+    const [testName, setTestName] = useState(""); // State to store the first test name
 
     useEffect(() => {
         const testsData = sessionStorage.getItem('selectedTests');
         if (testsData) {
             const tests = JSON.parse(testsData);
             setSelectedTests(tests);
+
+            // Set the first test name
+            if (tests.length > 0) {
+                setTestName(tests[0].testName);
+            }
         }
     }, []);
+
+
+    const handleSubmit = async () => {
+        console.log(testName);
+        try {
+            // Send the selectedTests data to your backend API
+            await axios.post('http://localhost:4000/checkout/testCheckout', testName);
+
+            // Clear the session storage or perform any other necessary cleanup
+            sessionStorage.removeItem('selectedTests');
+
+        } catch (error) {
+            console.error('Error submitting data:', error);
+            // Handle error, show an error message, etc.
+        }
+    };
 
     const calculateTotal = () => {
         let total = 0;
@@ -19,7 +44,7 @@ function SummaryTable() {
         });
         return total.toFixed(2);
     };
-    
+
 
     return (
         <>
@@ -30,7 +55,9 @@ function SummaryTable() {
                     </div>
                 </div>
                 <div className="bg-white shadow px-4 md:px-10 pt-4 md:pt-7 pb-5 overflow-y-auto">
-                    <table className="w-full whitespace-nowrap">
+                    <table
+                    // onSubmit={handleSubmit}
+                        className="w-full whitespace-nowrap">
                         <thead>
                             <tr className="h-16 w-full text-sm leading-none text-gray-800">
                                 <th className="font-bold text-lg text-left">Reserved Tests</th>
@@ -80,6 +107,14 @@ function SummaryTable() {
             <div className="container py-2 bg-gray-100 flex justify-between w-50 items-center mt-50 mb-4">
                 <p className="text-xl font-semibold leading-4 text-gray-800">Total Price : </p>
                 <p className="text-lg font-semibold leading-4 text-gray-800">{calculateTotal()} JD</p>
+                {/* <button
+                    type="submit"
+                    onClick={handleSubmit}
+                    className="mt-2 font-medium leading-4 py-2 px-2 text-white text-center text-decoration-none rounded"
+                    style={{ backgroundColor: '#3AA6B9' }}
+                >
+                    Confirm ?
+                </button> */}
             </div>
 
             {/* <Link to="#" className="flex justify-center items-center text-decoration-none">

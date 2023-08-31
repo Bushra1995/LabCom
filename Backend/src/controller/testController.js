@@ -1,15 +1,25 @@
 const Test = require('../models/test');
 
+// exports.getTest = async (req, res) => {
+//     try {
+//         const test = await Test.find().populate('labName');
+
+//         res.json(test);
+//     } catch (error) {
+//         res.status(500).json({ error: 'Failed to fetch tests' });
+//     }
+// };
+
+// get the tests in the lab page
 exports.getTest = async (req, res) => {
     try {
-        const test = await Test.find().populate('labName');
-
-        res.json(test);
+        const laboratories = await Test.find(); 
+        res.status(200).json(laboratories);
     } catch (error) {
-        res.status(500).json({ error: 'Failed to fetch tests' });
+        console.error(error);
+        res.status(500).json({ error: 'Internal server error' });
     }
 };
-
 
 // For getting the lab name in the LabPage
 exports.getLabName = async (req, res) => {
@@ -31,6 +41,7 @@ exports.getLabName = async (req, res) => {
 exports.createTest = async (req, res) => {
     try {
         const { testName, testDescription, sampleType, testRequirements, testTiming, testPrice } = req.body;
+        console.log(testName, testDescription, sampleType, testRequirements, testTiming, testPrice)
 
         const test = new Test({
             testName,

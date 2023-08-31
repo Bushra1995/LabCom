@@ -47,7 +47,7 @@ const LabPage = () => {
     // Get the Tests from DB
     const [tests, setTests] = useState([]);
     useEffect(() => {
-        axios.get('http://localhost:4000/test/test')
+        axios.get('http://localhost:4000/test/getTest')
             .then(response => {
                 setTests(response.data);
             })
@@ -55,6 +55,7 @@ const LabPage = () => {
                 console.log(error);
             });
     }, []);
+    
 
     const handleAddToCheckout = (test) => {
         const selectedTests = sessionStorage.getItem('selectedTests');
@@ -103,7 +104,8 @@ const LabPage = () => {
                                 <strong className="block font-extrabold text-white">Range of tests</strong>
                             </h1>
                             <p className="mt-4 max-w-lg sm:text-xl/relaxed">
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo tenetur fuga ducimus numquam ea!
+                            we are dedicated to providing you with comprehensive medical testing services. With a wide array of tests available,
+                             our laboratory is equipped to cater to a diverse range of medical needs
                             </p>
                             <div className="mt-8 flex flex-wrap gap-4 text-center">
                                 <a
@@ -202,14 +204,13 @@ const LabPage = () => {
                                 Nuxt development is carried out by passionate developers
                             </h2>
                             <p className="mt-6 text-gray-600">
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum omnis
-                                voluptatem accusantium nemo perspiciatis delectus atque autem!
-                                Voluptatum tenetur beatae unde aperiam!
+                            Welcome to our state-of-the-art medical laboratory! Here, we are dedicated to providing you with comprehensive medical testing services. With a wide array of tests available,
+                             our laboratory is equipped to cater to a diverse range of medical needs.
                             </p>
                             <p className="mt-4 text-gray-600">
                                 {" "}
-                                Nobis minus voluptatibus pariatur dignissimos libero quaerat iure
-                                expedita at? Asperiores nemo possimus.
+                                From routine screenings to specialized diagnostics, we are committed to delivering accurate results and contributing to your health and well-being. Trust in our expertise as we prioritize precision and care in every test we conduct.
+                                 Your health is our priority, and we're here to support you on your medical journey.
                             </p>
                         </div>
                     </div>

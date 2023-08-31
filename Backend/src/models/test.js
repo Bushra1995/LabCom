@@ -1,11 +1,6 @@
 const mongoose = require('mongoose');
 
 const testSchema = new mongoose.Schema({
-    labName: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'laboratories',
-        required: true
-    },
     testName: {
         type: String,
         required: true
@@ -18,7 +13,7 @@ const testSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    testConditions: {
+    testRequirements: {
         type: String,
         required: true
     },
@@ -26,7 +21,7 @@ const testSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    price: {
+    testPrice: {
         type: String,
         required: true
     }

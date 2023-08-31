@@ -9,14 +9,18 @@ const checkoutSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    cardHolderName: {
+    testName: {
         type: String,
         required: true
     },
-    // selectedTests: {
-    //     type: String,
-    //     required: true
-    // },
+    phoneNumber: {
+        type: String,
+        required: true
+    },
+    cardHolderName: {
+        type: String,
+        required: false
+    },
     
 
 });
